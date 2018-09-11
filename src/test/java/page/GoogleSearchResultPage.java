@@ -36,8 +36,8 @@ public class GoogleSearchResultPage extends BasePage{
         return searchResultList;
     }
 
-    public GoogleSearchResultPageTwo clickNext() {
+    public GoogleSearchResultPage clickNext() {
         linkToPageTwo.click();
-        return new GoogleSearchResultPageTwo(browser);
+        return new GoogleSearchResultPage(browser);
     }
 }

@@ -23,6 +23,6 @@ File "google-search-tests.xml" contains settings wich used to start project with
  
 **To run tests via command line:**
 1. Install Maven from (https://maven.apache.org/download.cgi) to the program files.
-2. Create parametr "mvn" in your system(name: mvn, path:C:\Program Files\apache-maven-3.5.4\bin).
+2. Create parametr "mvn" in your system environment(path:C:\Program Files\apache-maven-3.5.4\bin).
 3. Add maven-compiler-plugin to the pom.xml.               
 4. Enter mvn clean install -DsuteName.xml.

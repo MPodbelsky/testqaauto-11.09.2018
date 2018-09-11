@@ -3,7 +3,6 @@ package test;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import page.GoogleSearchResultPage;
-import page.GoogleSearchResultPageTwo;
 
 import java.util.List;
 
@@ -20,10 +19,9 @@ public class GoogleSearchTest extends BaseTest {
         for (String searchResult : searchResults) {
             Assert.assertTrue(searchResult.toLowerCase().contains(serchTerm), "searchTerm" + "not found in:  \n" + searchResult);
         }
-        GoogleSearchResultPageTwo googleSearchResultPageTwo = googleSearchResultPage.clickNext();
-        Assert.assertTrue(googleSearchResultPageTwo.isLoaded(),"Next google search result page is not loaded");
-        Assert.assertEquals(googleSearchResultPageTwo.getSearchResultCount(), 10, "Search results count is wrong");
-        List<String> searchResultsTwo = googleSearchResultPageTwo.getSearchResultsList();
+        googleSearchResultPage.clickNext();
+        Assert.assertEquals(googleSearchResultPage.getSearchResultCount(), 10, "Search results count is wrong");
+        List<String> searchResultsTwo = googleSearchResultPage.getSearchResultsList();
         for (String searchResult : searchResultsTwo) {
             Assert.assertTrue(searchResult.toLowerCase().contains(serchTerm), "searchTerm" + "not found in:  \n" + searchResult);
         }
