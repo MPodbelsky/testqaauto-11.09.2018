@@ -11,7 +11,14 @@ import java.util.List;
 
 public class GoogleSearchResultPage extends BasePage{
     @FindBy(xpath = "//a[@aria-label='Page 2']")
-    WebElement linkToPageTwo;
+    WebElement linkToNextPage;
+
+    @FindBy(xpath = "//div[@id='resultStats']")
+    WebElement counterAllResults;
+
+    @FindBy(xpath = "//div[@class='srg']/div[@class='g']")
+    List<WebElement> searchResults;
+
 
     public GoogleSearchResultPage(WebDriver browser) {
         this.browser = browser;
@@ -37,7 +44,7 @@ public class GoogleSearchResultPage extends BasePage{
     }
 
     public GoogleSearchResultPage clickNext() {
-        linkToPageTwo.click();
+        linkToNextPage.click();
         return new GoogleSearchResultPage(browser);
     }
 }
