@@ -8,10 +8,21 @@ Launch JDK.exe file and accept all the requirements.
 Put the file from archive to the root folder "System32".
 
 **Files in my project:**
-1. Package "page" contains all pages of tests that needs for this project. 
-2. Package "test" contains BaseTest and GoogleSearchTest.
 
+File "pom.xml" contains all dependencies which are required to run the test. Without pom.xml 
+tests can not be run. 
+
+File "google-search-tests.xml" contains settings wich used to start project with parameters(few browsers).
+
+
+**Package "page" contains of all pages of tests that needs for this project:**
+1. Patern PageObject is used for each page of project.
+ 
+**Package "test" contains of BaseTest and GoogleSearchTest:**
+1. Select "GoogleSearchTest" to run "basicSearchTest".
+ 
 **To run tests via command line:**
-1. Install Maven from (https://maven.apache.org/download.cgi) to the program files
-2. Create parametr "mvn" in your system(name: mvn, path:C:\Program Files\apache-maven-3.5.4\bin)
-3. Enter mvn clean install -DsuteName.xml.
+1. Install Maven from (https://maven.apache.org/download.cgi) to the program files.
+2. Create parametr "mvn" in your system(name: mvn, path:C:\Program Files\apache-maven-3.5.4\bin).
+3. Add maven-compiler-plugin to the pom.xml.               
+4. Enter mvn clean install -DsuteName.xml.
