@@ -6,7 +6,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public abstract class BasePage {
-        WebDriver browser;
+    WebDriver browser;
 
     public abstract boolean isLoaded();
 

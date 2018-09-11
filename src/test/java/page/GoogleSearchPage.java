@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class GoogleSearchPage extends BasePage {
     @FindBy(xpath = "//input[@name='q']")
-    WebElement queryField;
+    private WebElement queryField;
 
     public GoogleSearchPage(WebDriver browser){
     this.browser = browser;

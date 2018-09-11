@@ -11,13 +11,13 @@ import java.util.List;
 
 public class GoogleSearchResultPage extends BasePage{
     @FindBy(xpath = "//a[@aria-label='Page 2']")
-    WebElement linkToNextPage;
+    private WebElement linkToNextPage;
 
     @FindBy(xpath = "//div[@id='resultStats']")
-    WebElement counterAllResults;
+    private WebElement counterAllResults;
 
     @FindBy(xpath = "//div[@class='srg']/div[@class='g']")
-    List<WebElement> searchResults;
+    private List<WebElement> searchResults;
 
 
     public GoogleSearchResultPage(WebDriver browser) {
