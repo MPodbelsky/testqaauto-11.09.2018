@@ -28,7 +28,7 @@ public class GoogleSearchResultPage extends BasePage{
 
     public boolean isLoaded() {
         return counterAllResults.isDisplayed()
-                &&getCurrentPageTitle().contains("Selenium - Поиск в Google")
+                &&getCurrentPageTitle().toLowerCase().contains("selenium")
                 &&getCurrentPageUrl().contains("https://www.google.com/search");
     }
     public int getSearchResultCount(){
